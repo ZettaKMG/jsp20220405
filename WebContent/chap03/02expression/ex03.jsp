@@ -8,19 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>expression 표현식 : </h1>
-<p>out객체 print 메소드의 아규먼트(매개값)으로 번역</p>
-<%= "표현식" %>
-<% 
-// 스크립트릿
-// _jspService 메소드의 명령문들
+<%
+for(int i = 1; i <= 10; i++) {
+	out.print(i);
+	out.print("<br>");
+}
 %>
 
+<hr />
 <%
-out.print("hello");
-out.print("hi");
+for (int i = 1; i <= 10; i++) {
 %>
-<%= "hello" %><%= "hi" %>
+	<%= i %>
+	<br />
+<%
+}
+%>	
 
 </body>
 </html>
