@@ -47,6 +47,6 @@ address 파라미터 = <%= request.getParameter("address") %>
 name = <%= nameParam[0] %>
 <%
 	}
-%>
+%> 
 </body>
 </html>
