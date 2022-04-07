@@ -10,16 +10,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>GET 방식 전송</h1>
-<p>주소창에 표시되고 길이에 제한이 있다.</p>
-
-<h1>POST 방식 전송</h1>
-<p>주소에 표시안되고 길이에 제한이 없다.</p>
-<form action="ex19.jsp" method="post">
-	<!-- input:password+br+button{로그인} -->
-	<input type="password" name="pw" id="" />
+<h1>post 전송</h1>
+<!-- form>(input+br)*3+button{전송} -->
+<form action="ex20.jsp" method="post">
+	<input type="text" name="movie" value="doctor strange" />
 	<br />
-	<button>로그인</button>
+	<input type="text" name="age" value="700" />
+	<br />
+	<input type="text" name="name" value="stephen" />
+	<br />
+	<button>전송</button>
 </form>
 
 </body>
