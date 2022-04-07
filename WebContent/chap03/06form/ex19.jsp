@@ -19,6 +19,8 @@
 	<br />
 	<input type="text" name="name" value="stephen" />
 	<br />
+	<input type="text" name="address" value="seoul" />
+	<br />
 	<button>전송</button>
 </form>
 
