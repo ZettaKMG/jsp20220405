@@ -17,7 +17,7 @@
 
 
 <%-- query string 으로 전달하는 방법(비추천) --%>
-<jsu:include page="ex12.jsp?name=hello world+한글&age=30"></jsu:include>
+<jsp:include page="ex12.jsp?name=hello world+한글&age=30"></jsp:include>
 
 <%-- jsp param 표준 액션 태그 사용 방법(추천) --%>
 <jsp:include page="ex12.jsp">
