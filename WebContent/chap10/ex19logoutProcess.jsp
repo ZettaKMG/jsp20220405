@@ -11,6 +11,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+	session.removeAttribute("id");
+	%>
 
+	<h1>로그아웃 되었습니다.</h1>
+	
+	<h2><a href="ex17loginForm.jsp">로그인 하러 가기</a></h2>
 </body>
 </html>
