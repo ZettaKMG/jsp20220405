@@ -12,7 +12,7 @@
 </head>
 <body>
 	<h1>로그인</h1>
-	<form action="ex13loginprocess.jsp" method="post">
+	<form action="ex13loginProcess.jsp" method="post">
 		아이디: <input type="text" name="id" /> <br />
 		암호: <input type="password" name="pw" /> <br />
 	
