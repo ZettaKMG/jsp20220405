@@ -21,7 +21,7 @@
 	List<String> list = (List<String>) session.getAttribute("names");
 	
 	out.print("<ul>");
-	for (String name : names) {
+	for (String name : list) {
 		out.print("<li>");
 		out.print(name); // list item 3개 출력
 		out.print("</li>");

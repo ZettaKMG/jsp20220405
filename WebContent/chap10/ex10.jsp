@@ -11,16 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>ex08.jsp</h1>
-	<h2>session에 names attribute(속성) set</h2>
-	
-	<%
-	List<String> o = new ArrayList<>();
-	o.add("serena");
-	o.add("inanna");
-	o.add("azena");
-	
-	session.setAttribute("names", o);
-	%>
+	<h1>ex10.jsp</h1>
+	<h1>session id : <%= session.getId() %></h1>
 </body>
 </html>
