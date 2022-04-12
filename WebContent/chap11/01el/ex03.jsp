@@ -11,19 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>EL (Expression Language)</h1>
-	
-	<p>작성법 : \${attribute }</p>
+	<h1>Attribute(속성)이 존재하지 않을 때 : 표시안됨</h1>
 	
 	<%
 	pageContext.setAttribute("pageAttr1", "PAGE ATTRIBUTE1");
 	%>
 	
-	<p>
-		<%= pageContext.getAttribute("pageAttr1") %>
-	</p>
-	<p>
-		${pageAttr1 }
-	</p>
+	<p>${pageAttr1 }</p>
+	<p>${pageAttr2 }</p>
+	
+	<p><%= pageContext.getAttribute("pageAttr2") %></p>
 </body>
 </html>
