@@ -11,6 +11,10 @@ package chap08;
 // 예) 아래 클래스의 get(is), set 메소드 4개 중 get, set 제거하고, 앞글자를 소문자로 바꾸면
 // 나오는 (name, age)가 속성(property)
 
+// get 메소드는 속성 읽기
+// set 메소드는 속성 쓰기
+
+// is : get메소드의 리턴 타입이 boolean이면 is로 변경 가능
 public class MyBean1 {
 	private String name;
 	private int age;

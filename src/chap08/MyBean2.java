@@ -13,4 +13,8 @@ public class MyBean2 {
 	public int getDiscountPrice() {
 		return price;
 	}
+	
+	public boolean isHighPrice() {
+		return price > 10000;
+	}
 }
