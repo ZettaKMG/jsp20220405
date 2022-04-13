@@ -12,35 +12,5 @@
 </head>
 <body>
 
-<%
-List<String> list = new ArrayList<>();
-list.add("jhope");
-list.add("rm");
-list.add("jungkook");
-list.add("jin");
-
-pageContext.setAttribute("myList", list);
-
-for (int i = 0; i < list.size(); i++) {
-	pageContext.setAttribute("idx", i);
-%>
-
-	<p>${myList[idx] }</p>
-	
-<%
-}
-%>	
-
-<hr />
-
-<%
-for (String item : list) {
-	pageContext.setAttribute("elem", item);
-%>
-	<p>${elem }</p>
-<%
-}
-%>
-
 </body>
 </html>
