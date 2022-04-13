@@ -12,5 +12,26 @@
 </head>
 <body>
 
+<%
+// 적절한 코드 작성
+List<String> list = new ArrayList<>();
+list.add("alpha");
+list.add("beta");
+list.add("gamma");
+list.add("delta");
+list.add("epsilon");
+
+pageContext.setAttribute("myList", list);
+%>
+
+<%
+for (int i = 0; i < list.size(); i++) {
+	pageContext.setAttribute("index", i);
+%>
+	<p>${myList[index] }</p>
+<%
+}
+%>
+
 </body>
 </html>
