@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.*" %>  
 <% request.setCharacterEncoding("utf-8"); %>  
 <!DOCTYPE html>
@@ -13,25 +12,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- http://localhost:8080/jsp99/chap12/01if/ex02.jsp?num1=5&num2=3 --%>
-	<c:if test="${(not empty param.num1) and (not empty param.num2) }">
-		<h1>${param.num1 } + ${param.num2 } = ${param.num1 + param.num2 }</h1>
-	</c:if>
-
-	<%-- http://localhost:8080/jsp99/chap12/01if/ex02.jsp --%>
-	<c:if test="${(empty param.num1) or (empty param.num2) }">
-		<h1>num1, num2 파라미터를 작성해주세요.</h1>
-	</c:if>
+	<form action="ex04.jsp">
+		나이 : <input type="number" name="age" id="" /> <br />
+		<input type="submit" value="공포영화 관람가능?" />
+	</form>
 	
-	<hr />
-	<c:if test="${(not empty param.num1) and (not empty param.num2) }" var="myTest" scope="page">
-		<h1>${param.num1 } + ${param.num2 } = ${param.num1 + param.num2 }</h1>
-	</c:if>
-	
-	<p>${myTest }</p>
-	
-	<c:if test="${not myTest }">
-		<h1>num1, num2 파라미터를 작성해주세요.</h1>
-	</c:if>
+	<%-- age 요청파라미터 값이 20보다 크거나 같을 때, "관람가능" 출력 --%>
+	<%-- 아니면 "관람불가능" 출력하는 ex04.jsp 작성 (jstl, el 사용) --%>
 </body>
 </html>
