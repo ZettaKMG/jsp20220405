@@ -22,5 +22,16 @@
 	<c:if test="${(empty param.num1) or (empty param.num2) }">
 		<h1>num1, num2 파라미터를 작성해주세요.</h1>
 	</c:if>
+	
+	<hr />
+	<c:if test="${(not empty param.num1) and (not empty param.num2) }" var="myTest">
+		<h1>${param.num1 } + ${param.num2 } = ${param.num1 + param.num2 }</h1>
+	</c:if>
+	
+	<p>${myTest }</p>
+	
+	<c:if test="${not myTest }">
+		<h1>num1, num2 파라미터를 작성해주세요.</h1>
+	</c:if>
 </body>
 </html>
