@@ -12,10 +12,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- 주소창에 적절한 쿼리 스트링을 작성 --%>
-	<%-- ?season=spring&email=hello@gmail.com&song=butter --%>
-	<p>${param.season }</p> <%-- spring --%>
-	<p>${param.email }</p> <%-- hello@gmail.com --%>
-	<p>${param.song }</p> <<%-- butter %>
+	<form action="ex03.jsp" method="post">
+		<%-- 적절한 코드 작성해서 ex03에 spring, hello@gmail.com, butter 출력되도록 --%>
+		
+		<input type="text" name="season" value="spring" />
+		<input type="text" name="email" value="hello@gmail.com" />
+		<input type="text" name="song" value="butter" />
+		
+		<input type="submit" value="전송" />
+		
+	</form>
 </body>
 </html>
