@@ -31,12 +31,12 @@
 	
 	<hr />
 	
-	<table class="table">
+	<table class="table table-bordered">
 		<thead>
 			<tr>
-				<td>#</td>
-				<td>model</td>
-				<td>price</td>
+				<th>#</th>
+				<th>model</th>
+				<th>price</th>
 			</tr>
 		</thead>
 		<tbody>
