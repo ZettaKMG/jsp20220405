@@ -9,10 +9,20 @@
 
 String model = request.getParameter("model");
 String priceStr = request.getParameter("price");
+String available = request.getParameter("available");
+String[] owners = request.getParameterValues("owner");
 
 int price = Integer.parseInt(priceStr);
 
 Car car = new Car(model, price);
+
+if (available != null && available.equals("true")) {
+	car.setAvailable(true);
+}
+
+if (owners != null) {
+	car.setOwners(Arrays.asList(owners));
+}
 
 // car를  database에 저장해야하는데
 // application에 저장하는 걸로 대체...
