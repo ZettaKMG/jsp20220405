@@ -24,6 +24,7 @@
 	</c:forEach>
 	
 	<hr />
+	
 	<%-- avengers, thor, ironman 출력 --%>
 	<c:forEach items="${movies }" var="movie" begin="0" end="2">
 		<p>${movie }</p>	
