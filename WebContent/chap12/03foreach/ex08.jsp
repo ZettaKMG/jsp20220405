@@ -13,12 +13,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>구구단 2, 4, 6, 8단 출력</h1>
-	<c:forEach begin="2" end="9" step="2" var="i">
-		<h3>${i }단</h3>
-		<c:forEach begin="1" end="9" var="j">
-			<p>${i } x ${j } = ${i * j }</p>
-		</c:forEach>
+	<%
+	String[] movies = {"avengers", "thor", "ironman", "superman", "batman"};
+	
+	pageContext.setAttribute("movies", movies);
+	%>
+	
+	<c:forEach items="${movies }" var="movie" begin="3" end="4">
+		<p>${movie }</p>	
+	</c:forEach>
+	
+	<hr />
+	<%-- avengers, thor, ironman 출력 --%>
+	<c:forEach items="${movies }" var="movie" begin="0" end="2">
+		<p>${movie }</p>	
 	</c:forEach>
 </body>
 </html>

@@ -13,12 +13,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>구구단 2, 4, 6, 8단 출력</h1>
-	<c:forEach begin="2" end="9" step="2" var="i">
-		<h3>${i }단</h3>
-		<c:forEach begin="1" end="9" var="j">
-			<p>${i } x ${j } = ${i * j }</p>
+
+	<%
+	String[] list = {"deadpool", "logan", "captain", "ironman", "blackpanther"};
+	
+	pageContext.setAttribute("characters", list);
+	%>
+	
+	<ul>
+		<li>deadpool</li>
+		<li>logan</li>
+		<li>captain</li>
+		<li>ironman</li>
+		<li>blackpanther</li>
+	</ul>
+	
+	<hr />
+	
+	<ul>
+		<c:forEach items="${characters }" var="c">
+			<li>${c }</li>
 		</c:forEach>
-	</c:forEach>
+	</ul>
 </body>
 </html>

@@ -13,12 +13,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>구구단 2, 4, 6, 8단 출력</h1>
-	<c:forEach begin="2" end="9" step="2" var="i">
-		<h3>${i }단</h3>
-		<c:forEach begin="1" end="9" var="j">
-			<p>${i } x ${j } = ${i * j }</p>
-		</c:forEach>
+	<%
+	String[] arr = {"spring", "summer", "fall", "winter"};
+	
+	pageContext.setAttribute("list", arr);
+	%>
+	
+	<c:forEach items="${list }" var="s">
+		<h1>season : ${s }</h1>
 	</c:forEach>
 </body>
 </html>
