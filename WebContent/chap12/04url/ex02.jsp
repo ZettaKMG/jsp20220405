@@ -23,5 +23,12 @@
 	
 	<a href="${ex01RelUrl }">ex01 (상대경로 c:url 사용)</a>
 
+	<br />
+	
+	<%-- 절대 경로 --%>
+	<c:url value="/chap12/04url/ex01.jsp" var="ex01AbsUrl"></c:url>
+	
+	<a href="${ex01AbsUrl }">ex01 (절대경로 c:url 사용)</a>
+
 </body>
 </html>
