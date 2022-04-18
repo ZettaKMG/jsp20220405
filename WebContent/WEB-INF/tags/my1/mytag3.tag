@@ -1,4 +1,4 @@
-<%@ tag language="java" pageEncoding="UTF-8" %>
+<%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ attribute name="attr1" %>
 <%@ attribute name="attr2" %>
 
