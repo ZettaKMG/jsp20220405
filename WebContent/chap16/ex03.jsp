@@ -16,6 +16,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>attribute 추가</h1>
+	
+	<my:mytag3 attr1="1"></my:mytag3>
+	
+	<my:mytag3 attr1="hello"></my:mytag3>
+	
+	<my:mytag3 attr1="hi" attr2="jsp"></my:mytag3>
 </body>
 </html>
