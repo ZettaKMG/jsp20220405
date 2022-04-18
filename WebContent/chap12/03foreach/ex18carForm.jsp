@@ -66,12 +66,12 @@
 					<tr>
 						<td><a href="${deleteUrl }"><i class="fa-soild fa-trash-can"></i></a></td>
 						<td>${status.count }</td>
-						<td>${car.model }</td>
+						<td><c:out value="${car.model }" /></td>
 						<td>${car.price }</td>
 						<td>${car.available }</td>
 						<td>
 							<c:forEach items="${car.owners }" var="owner" varStatus="status">
-								${owner }
+								<c:out value="${owner }" />
 								<c:if test="${not status.last }">
 									,
 								</c:if>
