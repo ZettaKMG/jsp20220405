@@ -1,5 +1,5 @@
-* new jsp file (html5) 파트
-<%@ page language="java" contentType="text/html; charset=${encoding}" pageEncoding="${encoding}"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page import="java.util.*" %>
 
@@ -14,7 +14,3 @@
 
 <title>Insert title here</title>
 </head>
-
-* new tag file 파트
-<%@ tag language="java" pageEncoding="${encoding}"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
