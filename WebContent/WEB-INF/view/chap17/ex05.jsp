@@ -12,6 +12,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>자동차들</h1>
+
 	<table class="table table-bordered">
 		<thead>
 			<tr>
