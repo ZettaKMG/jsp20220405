@@ -28,6 +28,8 @@ public class Servlet07 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 적절한 코드 작성
+		request.setAttribute("myName", "ninave");
+		request.setAttribute("age", "307");
 		
 		String path = "/chap17/ex03.jsp";
 		request.getRequestDispatcher(path).forward(request, response);
