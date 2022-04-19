@@ -18,6 +18,6 @@
 	이 jsp로 forward 하는 Servlet09 코드 작성
 	--%>
 	
-	<h1>${name }은 ${address }에 삽니다...</h1>
+	<h1>${name }은(는) ${address }에 삽니다...</h1>
 </body>
 </html>
