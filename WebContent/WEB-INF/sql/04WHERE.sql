@@ -27,3 +27,12 @@ SELECT * FROM Customers WHERE Country = Germany; -- 문자형식은 작은 따�
 SELECT CustomerName FROM Customers WHERE CustomerID = 1;
 
 SELECT CustomerName, Address, City, PostalCode, Country FROM Customers WHERE CustomerID = 1;
+
+SELECT FirstName, LastName, BirthDate FROM Employees WHERE EmployeeID = 1;
+
+DESC Employees;
+
+SELECT CustomerName, City, Country, PostalCode FROM Customers;
+
+-- city=' OR '1'='1 <-- prepared statement를 쓰지 않으면 원치 않는 다른 정보까지 조회됨
+SELECT CustomerName, City, Country FROM Customers WHERE City = '' OR '1'='1';
