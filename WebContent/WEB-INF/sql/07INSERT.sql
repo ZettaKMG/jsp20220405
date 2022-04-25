@@ -22,3 +22,8 @@ VALUES ('Oscar', 'Issac', 'london', 'London', '8-999', 'UK');
 
 INSERT INTO Customers (Country, PostalCode, City, Address, ContactName, CustomerName)
 VALUES ('USA', 'A112', 'Seattle', 'Hotel', 'Rap Monster', 'RM');
+
+SELECT * FROM Employees ORDER BY EmployeeID DESC;
+DESC Employees;
+INSERT INTO Employees (LastName, FirstName, BirthDate, Photo, Notes)
+VALUES ('Jisung', 'Park', '1999-01-01', 'pic1', 'manchester united');
