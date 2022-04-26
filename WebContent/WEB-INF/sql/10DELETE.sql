@@ -13,3 +13,5 @@ DELETE FROM Customers WHERE Country = 'Mexico';
 
 DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 SELECT * FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+DESC Employees;
