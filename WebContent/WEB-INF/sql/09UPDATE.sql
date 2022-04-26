@@ -6,8 +6,8 @@ SET SQL_SAFE_UPDATES = 0;
 SELECT * FROM Employees ORDER BY EmployeeID DESC;
 DESC Employees;
 UPDATE Employees
-SET LastName = 'kim',
-	FirstName = 'jj'
+SET LastName = 'Kim',
+	FirstName = 'JaeJun'
 WHERE EmployeeID = 1;
 
 -- 예제1) 1번 고객(Customers Table)의
@@ -29,3 +29,7 @@ SELECT * FROM Products;
 
 UPDATE Products
 SET Price = Price + 2;
+
+SELECT 1 = 1; -- true 1
+SELECT 1 = 2; -- false 0
+SELECT 1 = '1'; -- true 1
