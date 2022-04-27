@@ -15,6 +15,12 @@ GROUP BY Country
 HAVING count > 3;
 
 -- 가장 적은 고객이 있는 나라들 조회
-SELECT Country, COUNT(CustomerID) count FROM Customers
+SELECT Country FROM Customers
 GROUP BY Country
-HAVING count < 2;
+HAVING COUNT(CustomerID) = (
+	SELECT COUNT(CustomerID) count 
+	FROM Customers
+	GROUP BY Country
+	ORDER BY count
+	LIMIT 1
+);
