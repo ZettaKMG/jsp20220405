@@ -12,6 +12,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>직원 조회</h1>
+	
+	<div>
+		<form>
+			이름 검색 <input type="text" name="keyword" value="${param.keyword }" />
+			<button>찾기</button>
+		</form>
+	</div>
+	
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>LastName</th>
+				<th>FirstName</th>
+				<th>BirthDate</th>
+				<th>Photo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${employeeList }" var="emp">
+				<tr>
+					<td>${emp.id }</td>
+					<td>${emp.lastName }</td>
+					<td>${emp.firstName }</td>
+					<td>${emp.birthDate }</td>
+					<td>${emp.photo }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>
