@@ -3,6 +3,11 @@ USE w3schools;
 -- 논리연산
 -- = : 같다
 SELECT * FROM Customers
+WHERE Country = 'Germany';
+
+-- > 크다, < 작다, >= 크거나 같다, <= 작거나 같다
+-- <>, != 다르다
+SELECT * FROM Customers
 WHERE Country <> 'Germany';
 SELECT * FROM Customers
 WHERE Country != 'Germany';
