@@ -21,7 +21,7 @@ public class BoardDao {
 		int result = 0;
 		// connection
 		// statement
-		try (PreparedStatement pstmt = con.prepareStatement(sql);) {
+		try (PreparedStatement pstmt = con.prepareStatement(sql)) {
 			pstmt.setString(1, dto.getTitle());
 			pstmt.setString(2, dto.getBody());
 			
