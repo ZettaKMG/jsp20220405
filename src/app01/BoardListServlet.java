@@ -18,7 +18,7 @@ import app01.dto.BoardDto;
 /**
  * Servlet implementation class BoardListServlet
  */
-@WebServlet("/BoardListServlet")
+@WebServlet("/board/list")
 public class BoardListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private DataSource ds;
