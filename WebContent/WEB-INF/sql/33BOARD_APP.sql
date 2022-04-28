@@ -7,3 +7,9 @@ CREATE TABLE Board (
     body VARCHAR(2000) NOT NULL,
     inserted DATETIME NOT NULL DEFAULT NOW()
 );
+
+SELECT * FROM Board;
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE Board
+SET inserted = DATE_SUB(inserted, INTERVAL 1 DAY);
