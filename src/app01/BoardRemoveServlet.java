@@ -16,7 +16,7 @@ import app01.dao.BoardDao;
 /**
  * Servlet implementation class BoardRemoveServlet
  */
-@WebServlet("/BoardRemoveServlet")
+@WebServlet("/board/remove")
 public class BoardRemoveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private DataSource ds;   
