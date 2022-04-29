@@ -15,7 +15,7 @@
 <%
 Map<String, List<String>> map = new HashMap<>();
 map.put("cars", Arrays.asList("tesla", "kia", "hyundai"));
-map.put("coffee", Arrays.asList("latte", "espresso", "capuccino");
+map.put("coffee", Arrays.asList("latte", "espresso", "capuccino"));
 
 pageContext.setAttribute("values", map);
 %>
