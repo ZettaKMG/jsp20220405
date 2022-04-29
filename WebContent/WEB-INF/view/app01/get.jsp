@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
+<script>
+	$(document).ready(function() {
+		$("#edit-button1").click(function() {
+			$("#input1").removeAttr("readonly");
+			$("#textarea1").removeAttr("readonly");
+			$("#modify-submit1").removeClass("d-none");
+		});
+	});
+</script>
+
 <title>Insert title here</title>
 </head>
 <body>
@@ -20,7 +30,27 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1>글 본문</h1>
+				<h1>글 본문
+					<button id="edit-button1" class="btn btn-secondary">
+						<i class="fa-solid fa-pen-to-square"></i>
+					</button>				
+				</h1>
+				
+				<c:if test="${not empty param.success }">
+					<c:if test="${param.success }">
+						<div class="alert alert-primary">
+							게시물이 수정되었습니다.
+						</div>
+					</c:if>
+					<c:if test="${not param.success }">
+						<div class="alert alert-danger">
+							게시물 수정 중 문제가 발생하였습니다.
+						</div>
+					</c:if>
+				</c:if>
+				
+				<form action="${appRoot }/board/modify" method="post">
+					<input type="hidden" name="id" value="${board.id }" />
 					<div>
 						<label class="form-label" for="input1">제목</label>
 						<input class="form-control" type="text" name="title" required
@@ -36,7 +66,9 @@
 					<div>
 						<label for="input2" class="form-label">작성일시</label>
 						<input class="form-control" type="datetime-local" value="${board.inserted }" readonly/>
-					</div>				
+					</div>		
+					<button id="modify-submit1" class="btn btn-primary d-none">수정</button>
+				</form>						
 			</div>
 		</div>
 	</div>
