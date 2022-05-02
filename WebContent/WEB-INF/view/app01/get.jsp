@@ -87,5 +87,21 @@
 			</div>
 		</div>
 	</div>
+	
+	<%-- 댓글 form --%>
+	<!-- .container.mt-3>.row>.col>form -->
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col">
+				<form action="${appRoot }/reply/insert" method="post">
+					<div class="input-group">
+						<input type="hidden" name="boardId" value="${board.id }" />
+						<input class="form-control" type="text" name="replyContent" required />
+						<button class="btn btn-outline-secondary"><i class="fa-solid fa-comment-dots"></i></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
