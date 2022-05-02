@@ -41,6 +41,17 @@
 				$(displayDivId).hide();
 				$(editFormId).show();
 			});
+			
+			// reply-delete-button 클릭시
+			$(".reply-delete-button").click(function() {
+				const replyId = $(this).attr("data-reply-id");
+				const message = "댓글을 삭제하시겠습니까?";
+				
+				if (confirm(message)) {
+					$("#replyDeleteInput1").val(replyId);
+					$("#replyDeleteForm1").submit();
+				}				
+			});			
 		});
 </script>
 
@@ -126,11 +137,16 @@
 								<div class="fw-bold"><i class="fa-solid fa-comment"></i> ${reply.prettyInserted }</div>
 								${reply.content }
 	
-								<button class="reply-edit-toggle-button" id="replyEditToggleButton${reply.id }" data-reply-id="${reply.id }"><i class="fa-solid fa-pen-to-square"></i></button>						
+								<button class="reply-edit-toggle-button" id="replyEditToggleButton${reply.id }" data-reply-id="${reply.id }"><i class="fa-solid fa-pen-to-square"></i></button>
+								
+								<button class="reply-delete-button" data-reply-id="${reply.id }">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>						
 							</div>
 							<div id="replyEditFormContainer${reply.id }" style="display: none;">
 								<form action="${appRoot }/reply/modify" method="post">
 									<div class="input-group">
+										<input type="hidden" name="boardId" value="${board.id }" />
 										<input type="hidden" name="replyId" value="${reply.id }" />
 										<input class="form-control" value="${reply.content }" type="text" name="replyContent" required />
 										<button class="btn btn-outline-secondary"><i class="fa-solid fa-comment-dots"></i></button>
@@ -142,6 +158,14 @@
 				</ul>			
 			</div>
 		</div>
+	</div>
+	
+	<%-- 댓글 삭제 form --%>
+	<div class="d-none">
+		<form id="replyDeleteForm1" action="${appRoot }/reply/delete" method="post">
+			<input id="replyDeleteInput1" type="text" name="id" />
+			<input type="text" name="boardId" value="${board.id }" />
+		</form>
 	</div>
 	
 </body>
