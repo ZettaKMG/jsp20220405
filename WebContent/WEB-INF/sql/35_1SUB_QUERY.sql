@@ -49,3 +49,44 @@ ORDER BY 1;
 SELECT DISTINCT Country FROM Suppliers
 WHERE Country IN (SELECT Country FROM Customers)
 ORDER BY 1;
+
+-- sol #1587 leetcode
+-- SUBQUERY
+SELECT (SELECT name FROM Users u WHERE t.account = u.account) name, 
+SUM(t.amount) balance
+FROM Transactions t
+GROUP BY t.account
+HAVING balance > 10000;
+
+-- JOIN
+SELECT u.name, SUM(t.amount) balance FROM Users u
+JOIN Transactions t ON u.account = t.account
+GROUP BY u.account
+HAVING balance > 10000;
+
+-- sol #1407 leetcode
+-- SUBQUERY
+SELECT name, IFNULL((SELECT SUM(distance) FROM Rides WHERE user_id = Users.id), 0) travelled_distance
+FROM Users
+ORDER BY 2 DESC, 1;
+
+-- JOIN
+SELECT u.name, SUM(IFNULL(r.distance,0)) travelled_distance
+FROM Users u LEFT JOIN Rides r ON u.id = r.user_id
+GROUP BY u.id
+ORDER BY 2 DESC, 1;
+
+-- sol #1965 leetcode
+SELECT e.employee_id
+FROM Employees e LEFT JOIN Salaries s
+ON e.employee_id = s.employee_id
+WHERE s.employee_id IS NULL
+
+UNION
+
+SELECT s.employee_id
+FROM Employees e RIGHT JOIN Salaries s
+ON e.employee_id = s.employee_id
+WHERE e.employee_id IS NULL
+
+ORDER BY 1;
