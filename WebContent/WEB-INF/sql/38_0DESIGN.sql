@@ -17,7 +17,7 @@ CREATE TABLE Person1 (
     address VARCHAR(200)
 );
 SET autocommit = 1; -- auto commit enable
-INSERT INTO Person1 (name, address) VALUES ('A', '서울시 강남구 역삼동 111')
+INSERT INTO Person1 (name, address) VALUES ('A', '서울시 강남구 역삼동 111');
 
 COMMIT;
 
