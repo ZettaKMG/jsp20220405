@@ -67,11 +67,19 @@ FROM Categories c JOIN Products p ON c.CategoryID = p.CategoryID
 GROUP BY c.CategoryID
 ORDER BY 3 DESC;
 
--- '1996년 7월'
+-- '1996년 7월' 판매량
 SELECT c.CategoryID, c.CategoryName, SUM(IFNULL(od.Quantity,0)) TotalCount
 FROM Categories c JOIN Products p ON c.CategoryID = p.CategoryID
 				  JOIN OrderDetails od ON od.ProductID = p.ProductID
                   JOIN Orders o ON o.OrderID = od.OrderID
 WHERE o.OrderDate BETWEEN '1996-07-01' AND '1996-07-31'
+GROUP BY c.CategoryID
+ORDER BY 3 DESC;
+
+-- '1996-08-01 ~ '1996-08-07' (판매량이 0인 항목은 0 표시되게끔)
+SELECT c.CategoryID, c.CategoryName, SUM(IFNULL(od.Quantity, 0)) TotalCount
+FROM Orders o JOIN OrderDetails od ON o.OrderID = od.OrderID AND o.OrderDate BETWEEN '1996-08-01' AND '1996-08-07'
+			  JOIN Products p ON od.ProductID = p.ProductID
+			  RIGHT JOIN Categories c ON c.CategoryID = p.CategoryID
 GROUP BY c.CategoryID
 ORDER BY 3 DESC;
